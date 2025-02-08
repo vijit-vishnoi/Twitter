@@ -1,7 +1,7 @@
 const mongoose=require ('mongoose');
 
 const hashtagSchema=new mongoose.Schema({
-    type:{
+    title:{
         type: String,
         required: true
     },
