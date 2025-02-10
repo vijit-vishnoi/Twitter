@@ -1,23 +1,23 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const LikeSchema=new mongoose.Schema({
-    onModel:{
+const likeSchema=new mongoose.Schema({
+    onModel: {
         type: String,
         required: true,
-        enum: ['Tweet','Comment']
+        enum: ['Tweet', 'Comment'],
     },
     likeable:{
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         refPath: 'onModel'
     },
-    user:{
+    user: {
         type: mongoose.Schema.Types.ObjectId,
-        red: 'User',
-        required: true
+        ref: 'User',
+        reuqired: true
     }
-},{timestamps:true})
+},{timeStamps:true});
 
-const Like=mongoose.model('Like',LikeSchema);
+const Like=mongoose.model('Like',likeSchema);
 
 export default Like;
