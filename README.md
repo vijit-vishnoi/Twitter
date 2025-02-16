@@ -19,3 +19,5 @@
 - Pagination on tweets
 - User Auth
 - Every tweet might be having a hashtag
+
+// @babel/plugin-transform-modules-commonjs
